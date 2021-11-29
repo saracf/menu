@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+    <header>
+        <meta charset="UTF-8">
+        <title>Drop Down Sidebar Menu </title>
+        <link rel="stylesheet" href="style.css">
+        <!-- Boxicons CSS -->
+<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+        <meta name="viewport" content="whidth=device-width, intial-scale=1.0">
+    </header>
+    <body>
+        <div class="sidebar close">
+            <div class="logo-detail">
+                <i class="bx bx1-c-plus-plus"></i>
+                <span class="logo_name">CodignLab</span>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="#">
+                        <i class='bx bx-menu bx-rotate-180' ></i>
+                        <span class="link_name">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-user'></i>
+                        <span class="link_name">Usuário</span>
+                    </a>
+                </li>
+                <li>
+                    <div class="icon-link">
+                        <a href="#">
+                            <i class='bx bx-bookmarks'></i>
+                            <span class="link_name">Legislação</span>
+                        </a>
+                        <i class="bx bxs-chevron-down arrow"></i>
+                    </div>
+                    <ul class="sub-menu blank">
+                        <li><a class="link_name" href="#">Leis</a></li>
+                        <li><a class="link_name" href="#">Decretos</a></li>
+                        <li><a class="link_name" href="#">Portarias</a></li>
+                        <li><a class="link_name" href="#">Instrução Normativa</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <script>
+ 
+                let arrow = document.querySelectorAll(".arrow");
+                for(var i=0; i< arrow.length; i++){
+                    arrow[i].addEventListener("click", (e)=>{
+                let arrowParent = e.target.parentElement.parentElement;
+                console.log(arrowParent);
+                arrowParent.classList.toggle("showMenu");
+                    });
+                
+            }
+            </script>
+ 
+        </div>
+    </body>
+</html>
